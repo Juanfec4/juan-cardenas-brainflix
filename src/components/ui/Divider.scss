@@ -1,0 +1,7 @@
+@use "../../styles/partials/colors" as *;
+
+$stroke-width: 1px;
+.divider {
+  width: 100%;
+  border-top: $stroke-width solid $clr-mercury;
+}

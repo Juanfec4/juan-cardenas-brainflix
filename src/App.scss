@@ -6,3 +6,8 @@
   font-family: $fnt-primary;
   color: $clr-brain-flix-black-100;
 }
+.hidden {
+  &--md {
+    display: none;
+  }
+}

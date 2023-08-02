@@ -3,6 +3,7 @@ import "./App.scss";
 import NavBar from "./components/layout/Navbar";
 import VideoPlayer from "./components/video/VideoPlayer";
 import apiService from "./utils/services/apiService";
+import Description from "./components/description/Description";
 function App() {
   const [video, setVideo] = useState("");
 
@@ -16,6 +17,7 @@ function App() {
     <>
       <NavBar />
       <VideoPlayer mediaObject={video} />
+      <Description mediaObject={video} />
     </>
   );
 }

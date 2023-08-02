@@ -1,0 +1,13 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+
+.icon-counter {
+  display: flex;
+  align-items: center;
+  gap: calc($p-between-components-sm / 2);
+  &__count {
+    color: $clr-silver;
+  }
+}

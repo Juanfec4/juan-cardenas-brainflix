@@ -1,0 +1,10 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+.video-description {
+  padding: $p-between-components-sm;
+  display: flex;
+  flex-direction: column;
+  gap: $p-between-components-sm;
+}

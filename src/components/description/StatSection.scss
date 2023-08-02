@@ -1,0 +1,22 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+
+.stats {
+  display: flex;
+  width: 100%;
+  @include md {
+    justify-content: space-between;
+  }
+  &__section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: $p-between-components-sm;
+    @include md {
+      flex-direction: row;
+      width: auto;
+    }
+  }
+}
