@@ -1,0 +1,43 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+
+$padding-between-components-sm: 1rem;
+$padding-between-components-md: 1.5rem;
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-between-components-sm;
+  gap: $padding-between-components-sm;
+  background-color: $clr-white;
+  @include md {
+    flex-direction: row;
+    align-items: center;
+    padding-left: $padding-between-components-md;
+    padding-right: $padding-between-components-md;
+    gap: $padding-between-components-md;
+  }
+  .avatar__container {
+    display: none;
+    @include md {
+      display: block;
+    }
+  }
+  &__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $padding-between-components-sm;
+    width: 100%;
+    @include md {
+      justify-content: end;
+    }
+    .avatar__container {
+      display: block;
+      @include md {
+        display: none;
+      }
+    }
+  }
+}

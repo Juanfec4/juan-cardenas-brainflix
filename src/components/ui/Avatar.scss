@@ -1,0 +1,34 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/responsive" as *;
+
+$avatar-radius: 50%;
+$max-diameter-sm: 2.25rem;
+$max-diameter-md: 2.5rem;
+.avatar {
+  &__container {
+    background-color: $clr-mercury;
+    border-radius: $avatar-radius;
+    width: max-content;
+    height: max-content;
+    max-height: $max-diameter-sm;
+    max-width: $max-diameter-sm;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include md {
+      width: max-content;
+      height: max-content;
+      max-width: $max-diameter-md;
+      max-height: $max-diameter-md;
+    }
+  }
+  &__image {
+    max-height: $max-diameter-sm;
+    @include md {
+      max-height: $max-diameter-md;
+      aspect-ratio: 2;
+    }
+  }
+}

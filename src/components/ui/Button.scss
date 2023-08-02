@@ -1,0 +1,38 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+
+$btn-height: 2.5rem;
+$btn-radius: 0.25rem;
+
+.button {
+  background-color: $clr-brain-flix-blue-100;
+  width: 100%;
+  height: $btn-height;
+  border: none;
+  border-radius: $btn-radius;
+
+  display: flex;
+  align-items: center;
+
+  @include md {
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    width: auto;
+  }
+
+  &__icon {
+    justify-self: start;
+  }
+  &__text {
+    @include labelFnt;
+    color: $clr-white;
+    text-transform: uppercase;
+    justify-self: center;
+    width: 100%;
+  }
+  &:hover {
+    background-color: $clr-brain-flix-blue-200;
+    cursor: pointer;
+  }
+}

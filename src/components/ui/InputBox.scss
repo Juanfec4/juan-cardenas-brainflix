@@ -1,0 +1,47 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+
+$input-radius: 0.25rem;
+$input-border: 0.0625rem;
+$input-padding-sm: 0.75rem;
+$input-padding-md: 1rem;
+$input-height: 2.5rem;
+$input-min-width: 15rem;
+.input {
+  background-color: $clr-alabaster;
+  border: $clr-mercury solid $input-border;
+  border-radius: $input-radius;
+  height: $input-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  @include md {
+    width: $input-min-width;
+    min-width: $input-min-width;
+  }
+  &__icon {
+    padding-left: $input-padding-sm;
+    @include md {
+      padding-left: $input-padding-md;
+    }
+  }
+  &__text-field {
+    color: $clr-brain-flix-black-100;
+    font-family: $fnt-primary;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    height: 100%;
+    width: 100%;
+    @include inputFnt;
+
+    &::placeholder {
+      font-family: $fnt-primary;
+      color: $clr-brain-flix-black-100;
+    }
+  }
+  &:focus-within {
+    border: $input-border $clr-brain-flix-blue-100 solid;
+  }
+}

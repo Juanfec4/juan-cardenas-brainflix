@@ -1,0 +1,10 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+
+$max-height: 1.5625rem;
+$max-width: 7.5rem;
+.site-logo {
+  background-color: $clr-white;
+  max-height: $max-width;
+}

@@ -1,0 +1,8 @@
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/colors" as *;
+
+* {
+  margin: 0;
+  font-family: $fnt-primary;
+  color: $clr-brain-flix-black-100;
+}
