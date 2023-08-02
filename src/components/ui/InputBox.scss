@@ -9,6 +9,7 @@ $input-padding-md: 1rem;
 $input-height: 2.5rem;
 $input-min-width: 15rem;
 .input {
+  box-sizing: border-box;
   background-color: $clr-alabaster;
   border: $clr-mercury solid $input-border;
   border-radius: $input-radius;
@@ -22,8 +23,10 @@ $input-min-width: 15rem;
   }
   &__icon {
     padding-left: $input-padding-sm;
+    padding-right: $input-padding-sm;
     @include md {
       padding-left: $input-padding-md;
+      padding-right: $input-padding-md;
     }
   }
   &__text-field {

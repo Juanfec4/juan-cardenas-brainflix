@@ -14,11 +14,11 @@ const NavBar = () => {
       <SiteLogo />
       <div className="nav__search">
         <InputBox placeholder={"Search"} iconSrc={searchIcon} />
-        <Avatar userName={"Juan"} avatarSrc={avatarImg} />
+        <Avatar userName={"user"} avatarSrc={avatarImg} />
       </div>
 
       <Button text={"upload"} iconSrc={uploadIcon} />
-      <Avatar userName={"Juan"} avatarSrc={avatarImg} />
+      <Avatar userName={"user"} avatarSrc={avatarImg} />
     </div>
   );
 };

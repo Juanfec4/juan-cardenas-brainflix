@@ -4,32 +4,38 @@
 
 $btn-height: 2.5rem;
 $btn-radius: 0.25rem;
-
+$btn-padding-sm: 0.75rem;
 .button {
   background-color: $clr-brain-flix-blue-100;
   width: 100%;
   height: $btn-height;
   border: none;
   border-radius: $btn-radius;
-
   display: flex;
   align-items: center;
-
   @include md {
     min-width: 9.375rem;
-    padding: 0 2rem;
+    padding: 0 $btn-padding-sm;
     width: auto;
   }
 
   &__icon {
     justify-self: start;
+    height: 1.25rem;
   }
   &__text {
     @include labelFnt;
     color: $clr-white;
     text-transform: uppercase;
-    justify-self: center;
+    text-align: center;
     width: 100%;
+    @include md {
+      width: auto;
+      text-align: left;
+      margin-left: $btn-padding-sm;
+      position: relative;
+      justify-self: center;
+    }
   }
   &:hover {
     background-color: $clr-brain-flix-blue-200;
