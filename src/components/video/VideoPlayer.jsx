@@ -6,7 +6,7 @@ const VideoPlayer = ({ mediaObject }) => {
   const { video, image, duration } = mediaObject;
   return (
     <>
-      <div className="video">
+      <section className="video">
         <div className="video__container">
           <video className="video__content" poster={image}></video>
           <source src={video} />
@@ -16,7 +16,7 @@ const VideoPlayer = ({ mediaObject }) => {
             <MediaButtons />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

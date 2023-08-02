@@ -7,20 +7,15 @@ $input-border: 0.0625rem;
 $input-padding-sm: 0.75rem;
 $input-padding-md: 1rem;
 $input-height: 2.5rem;
-$input-min-width: 15rem;
 .input {
   box-sizing: border-box;
   background-color: $clr-alabaster;
   border: $clr-mercury solid $input-border;
   border-radius: $input-radius;
-  height: $input-height;
+  min-height: $input-height;
   width: 100%;
   display: flex;
   align-items: center;
-  @include md {
-    width: $input-min-width;
-    min-width: $input-min-width;
-  }
   &__icon {
     padding-left: $input-padding-sm;
     padding-right: $input-padding-sm;
@@ -32,6 +27,7 @@ $input-min-width: 15rem;
   &__text-field {
     color: $clr-brain-flix-black-100;
     font-family: $fnt-primary;
+    padding: $input-padding-sm;
     background-color: transparent;
     border: none;
     outline: none;
@@ -46,5 +42,9 @@ $input-min-width: 15rem;
   }
   &:focus-within {
     border: $input-border $clr-brain-flix-blue-100 solid;
+  }
+  &__label {
+    @include labelFnt;
+    color: $clr-silver;
   }
 }

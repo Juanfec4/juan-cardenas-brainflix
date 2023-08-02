@@ -5,20 +5,21 @@ import Avatar from "../ui/Avatar";
 
 import uploadIcon from "../../assets/icons/upload.svg";
 import searchIcon from "../../assets/icons/search.svg";
-import avatarImg from "../../assets/images/Mohan-muruge.jpg";
 
 import "./Navbar.scss";
-const NavBar = () => {
+const NavBar = ({ avatarImg, userName }) => {
   return (
     <div className="nav">
       <SiteLogo />
       <div className="nav__search">
-        <InputBox placeholder={"Search"} iconSrc={searchIcon} />
-        <Avatar userName={"user"} avatarSrc={avatarImg} />
+        <span className="nav__search-box">
+          <InputBox placeholder={"Search"} iconSrc={searchIcon} />
+        </span>
+        <Avatar userName={userName} avatarSrc={avatarImg} />
       </div>
 
       <Button text={"upload"} iconSrc={uploadIcon} />
-      <Avatar userName={"user"} avatarSrc={avatarImg} />
+      <Avatar userName={userName} avatarSrc={avatarImg} />
     </div>
   );
 };

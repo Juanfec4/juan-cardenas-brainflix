@@ -4,6 +4,7 @@
 
 $padding-between-components-sm: 1rem;
 $padding-between-components-md: 1.5rem;
+$search-box-min-width: 15rem;
 .nav {
   display: flex;
   flex-direction: column;
@@ -38,6 +39,12 @@ $padding-between-components-md: 1.5rem;
       @include md {
         display: none;
       }
+    }
+  }
+  &__search-box {
+    width: 100%;
+    @include md {
+      width: $search-box-min-width;
     }
   }
 }

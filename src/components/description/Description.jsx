@@ -4,7 +4,7 @@ import "./Description.scss";
 const Description = ({ mediaObject }) => {
   const { title, description } = mediaObject;
   return (
-    <div className="video-description">
+    <section className="video-description">
       <h1 className="video-description__title">{title}</h1>
       <span className="hidden--md">
         <Divider />
@@ -12,7 +12,7 @@ const Description = ({ mediaObject }) => {
       <StatSection mediaObject={mediaObject} />
       <Divider />
       <p className="video-description__text">{description}</p>
-    </div>
+    </section>
   );
 };
 

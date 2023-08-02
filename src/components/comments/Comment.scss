@@ -1,0 +1,24 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+
+.comment {
+  display: flex;
+  gap: $p-between-components-sm;
+  padding: $p-between-components-sm 0;
+  &__content-container {
+    height: 100%;
+    width: 100%;
+  }
+  &__avatar-container {
+    display: flex;
+  }
+  &__metadata {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__timestamp {
+    color: $clr-silver;
+  }
+}

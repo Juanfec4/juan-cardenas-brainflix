@@ -1,6 +1,5 @@
 const getSimplifiedFormat = (timestamp) => {
   const date = new Date(timestamp);
-  console.log(date);
   let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();

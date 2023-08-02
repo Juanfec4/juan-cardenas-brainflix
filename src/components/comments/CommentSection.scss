@@ -3,9 +3,6 @@
 @use "../../styles/partials/responsive" as *;
 @use "../../styles/partials/variables" as *;
 
-.video-description {
+.comment-section {
   padding: $p-between-components-sm;
-  display: flex;
-  flex-direction: column;
-  gap: $p-between-components-sm;
 }
