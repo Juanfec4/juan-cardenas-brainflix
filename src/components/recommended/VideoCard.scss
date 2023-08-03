@@ -17,6 +17,9 @@ $video-min-width: 9.375rem;
     object-fit: cover;
     overflow: hidden;
     border-radius: $video-card-radius;
+    &:hover {
+      cursor: pointer;
+    }
   }
   &__text-container {
     max-width: $video-title-width;
