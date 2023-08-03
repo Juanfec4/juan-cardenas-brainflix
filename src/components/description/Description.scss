@@ -8,4 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: $p-between-components-sm;
+  @include lg {
+    padding-right: 0;
+  }
 }

@@ -30,11 +30,21 @@ function App() {
     <>
       <NavBar avatarImg={avatarImg} userName={"User"} />
       <VideoPlayer mediaObject={video} />
-      <Description mediaObject={video} />
-      {video.comments ? (
-        <CommentSection comments={video.comments} avatarImg={avatarImg} userName={"User"} />
-      ) : null}
-      <RecommendedVideos videos={videos} currentVideo={video} handleClick={handleDisplayVideo} />
+      <main className="page__content">
+        <section className="page__main-content">
+          <Description mediaObject={video} />
+          {video.comments ? (
+            <CommentSection comments={video.comments} avatarImg={avatarImg} userName={"User"} />
+          ) : null}
+        </section>
+        <aside className="page__side-content">
+          <RecommendedVideos
+            videos={videos}
+            currentVideo={video}
+            handleClick={handleDisplayVideo}
+          />
+        </aside>
+      </main>
     </>
   );
 }

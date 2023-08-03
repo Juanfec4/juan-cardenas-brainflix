@@ -18,6 +18,9 @@
       flex-direction: row;
       width: auto;
     }
+    @include lg {
+      padding-right: $p-between-components-sm;
+    }
   }
   &__date {
     color: $clr-silver;

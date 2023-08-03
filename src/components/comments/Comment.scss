@@ -7,6 +7,9 @@
   display: flex;
   gap: $p-between-components-sm;
   padding: $p-between-components-sm 0;
+  @include lg {
+    padding-right: $p-between-components-sm;
+  }
   &__content-container {
     height: 100%;
     width: 100%;
