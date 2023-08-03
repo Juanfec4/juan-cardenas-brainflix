@@ -1,0 +1,27 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+
+$video-card-radius: 0.25rem;
+$video-title-width: 12.5rem;
+$video-min-width: 9.375rem;
+.video-card {
+  display: flex;
+  gap: $p-between-components-sm;
+  padding: $p-between-components-sm;
+  &__image {
+    min-width: $video-min-width;
+    max-width: 20%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: $video-card-radius;
+  }
+  &__text-container {
+    max-width: $video-title-width;
+  }
+  &__title {
+    word-wrap: normal;
+  }
+}

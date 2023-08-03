@@ -1,0 +1,11 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+
+.recommended {
+  &__heading {
+    padding-left: $p-between-components-sm;
+    color: $clr-silver;
+  }
+}

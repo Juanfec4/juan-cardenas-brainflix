@@ -5,8 +5,6 @@ $avatar-radius: 50%;
 $max-diameter-sm: 2.25rem;
 $max-diameter-md: 2.5rem;
 .avatar {
-  &__container {
-  }
   &__image {
     border-radius: $avatar-radius;
     height: $max-diameter-sm;
