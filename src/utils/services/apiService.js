@@ -1,8 +1,14 @@
 import axios from "axios";
 
+const config = {
+  params: {
+    api_key: process.env.REACT_APP_API_URL,
+  },
+};
+
 const getVideos = async () => {
   try {
-    const response = await axios.get("./db/video-details.json");
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/videos`, config);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -10,9 +16,9 @@ const getVideos = async () => {
   }
 };
 
-const getVideosMinified = async () => {
+const getVideo = async (id) => {
   try {
-    const response = await axios.get("./db/videos.json");
+    const response = await axios.get(`${process.env.REACT_APP_API_URL}/videos/${id}`, config);
     return response.data;
   } catch (error) {
     console.error(error);
@@ -20,4 +26,14 @@ const getVideosMinified = async () => {
   }
 };
 
-export default { getVideos, getVideosMinified };
+// const getVideosMinified = async () => {
+//   try {
+//     const response = await axios.get("./db/videos.json");
+//     return response.data;
+//   } catch (error) {
+//     console.error(error);
+//     return undefined;
+//   }
+// };
+
+export default { getVideos, getVideo };
