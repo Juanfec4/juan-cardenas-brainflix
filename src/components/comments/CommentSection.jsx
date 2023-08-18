@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddCommentForm from "./AddCommentForm";
 
 import "./CommentSection.scss";
 import Divider from "../ui/Divider";
 import CommentGallery from "./CommentGallery";
-const CommentSection = ({ comments, avatarImg, userName }) => {
+const CommentSection = ({ comments, avatarImg, userName, handleNewComment }) => {
   const [newComment, setNewComment] = useState("");
 
   const handleNewCommentChange = (e) => {
@@ -12,6 +12,8 @@ const CommentSection = ({ comments, avatarImg, userName }) => {
   };
   const handlePostNewComment = (e) => {
     e.preventDefault();
+    handleNewComment(newComment);
+    setNewComment("");
   };
   return (
     <div className="comment-section">
