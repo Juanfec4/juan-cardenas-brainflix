@@ -24,7 +24,7 @@ const VideoPage = () => {
         setVideo(response);
       });
     }
-  }, [video, videos]);
+  }, [videos, params?.id]);
 
   useMemo(() => {
     if (state?.videos) {
