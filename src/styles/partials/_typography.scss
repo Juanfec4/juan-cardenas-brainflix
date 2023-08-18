@@ -57,6 +57,7 @@ p {
   font-size: 0.625rem;
   line-height: 1.25rem;
   font-weight: bold;
+  text-transform: uppercase;
   @include md {
     font-size: 0.75rem;
   }

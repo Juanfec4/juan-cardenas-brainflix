@@ -5,7 +5,6 @@ import eyeballSrc from "../../assets/icons/views.svg";
 import heartSrc from "../../assets/icons/likes.svg";
 
 import "./StatSection.scss";
-import Divider from "../ui/Divider";
 
 const StatSection = ({ mediaObject }) => {
   const { views, likes, channel, timestamp } = mediaObject;

@@ -7,4 +7,9 @@ $max-width: 7.5rem;
 .site-logo {
   background-color: $clr-white;
   max-height: $max-width;
+  &__image {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

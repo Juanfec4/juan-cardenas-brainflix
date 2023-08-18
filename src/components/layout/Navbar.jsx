@@ -21,7 +21,7 @@ const NavBar = ({ avatarImg, userName }) => {
         <Avatar userName={userName} avatarSrc={avatarImg} />
       </div>
 
-      <Button text={"upload"} iconSrc={uploadIcon} />
+      <Button text={"upload"} iconSrc={uploadIcon} handleClick={() => navigate("../upload")} />
       <Avatar userName={userName} avatarSrc={avatarImg} />
     </div>
   );

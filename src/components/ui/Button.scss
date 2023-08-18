@@ -13,10 +13,11 @@ $btn-padding-sm: 0.75rem;
   border-radius: $btn-radius;
   display: flex;
   align-items: center;
+  position: relative;
   @include md {
     min-width: 9.375rem;
+    width: 9.375rem;
     padding: 0 $btn-padding-sm;
-    width: auto;
   }
 
   &__icon {
@@ -28,14 +29,10 @@ $btn-padding-sm: 0.75rem;
     color: $clr-white;
     text-transform: uppercase;
     text-align: center;
-    width: 100%;
-    @include md {
-      width: auto;
-      text-align: left;
-      margin-left: $btn-padding-sm;
-      position: relative;
-      justify-self: center;
-    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   &:hover {
     background-color: $clr-brain-flix-blue-200;

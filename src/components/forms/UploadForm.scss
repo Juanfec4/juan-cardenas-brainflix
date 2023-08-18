@@ -1,0 +1,75 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: $p-between-components-sm;
+  gap: $p-between-components-sm;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: $p-between-components-sm;
+    gap: $p-between-components-sm;
+    @include lg {
+      flex-direction: row;
+      width: 100%;
+      gap: $p-between-components-sm;
+      max-height: min-content;
+    }
+  }
+  &__label {
+    @include labelFnt;
+    color: $clr-silver;
+  }
+  &__image {
+    max-width: 100%;
+    border-radius: $default-radius;
+  }
+  &__image-container {
+    max-width: 100%;
+    @include md {
+      max-width: 50%;
+    }
+    @include lg {
+      width: 30%;
+    }
+  }
+  &__input-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $p-between-components-sm;
+    padding: $p-between-components-sm;
+    flex-grow: 1;
+    @include lg {
+      justify-content: start;
+      .input-area__content,
+      .input-area {
+        height: 100%;
+      }
+    }
+  }
+  &__button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: $p-between-components-sm;
+    @include md {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
+  }
+  &__link {
+    @include labelFnt;
+    text-decoration: none;
+    color: $clr-brain-flix-blue-100;
+    text-align: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    min-width: 9.375rem;
+  }
+}

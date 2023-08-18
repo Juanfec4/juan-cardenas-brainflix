@@ -39,14 +39,14 @@ const VideoPage = () => {
   return (
     <>
       <VideoPlayer mediaObject={video} />
-      <main className="page__content">
-        <section className="page__main-content">
+      <main className="video-page__content">
+        <section className="video-page__main-content">
           <Description mediaObject={video} />
           {video.comments ? (
             <CommentSection comments={video.comments} avatarImg={avatarImg} userName={"User"} />
           ) : null}
         </section>
-        <aside className="page__side-content">
+        <aside className="video-page__side-content">
           <RecommendedVideos videos={videos} currentVideo={video} />
         </aside>
       </main>

@@ -38,7 +38,7 @@
     }
   }
   &__input-area {
-    width: calc(100% - $p-between-components-sm * 2);
+    width: 100%;
     @include md {
       display: none;
     }
