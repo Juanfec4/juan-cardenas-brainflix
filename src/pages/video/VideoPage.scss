@@ -1,0 +1,36 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/responsive" as *;
+@use "../../styles/partials/variables" as *;
+* {
+  margin: 0;
+  font-family: $fnt-primary;
+  color: $clr-brain-flix-black-100;
+}
+.hidden {
+  &--md {
+    display: none;
+  }
+}
+
+.page {
+  &__content {
+    @include lg {
+      display: flex;
+    }
+  }
+  &__main-content {
+    padding: $p-between-components-sm;
+    @include lg {
+      width: 70%;
+      border-right: solid $clr-mercury 2px;
+      padding-right: 0;
+    }
+  }
+  &__side-content {
+    @include lg {
+      width: 30%;
+      padding-top: $p-between-components-md;
+    }
+  }
+}

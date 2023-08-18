@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import VideoPage from "./pages/video/VideoPage";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import NavBar from "./components/layout/Navbar";
 
@@ -21,7 +21,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <VideoPage />,
+      },
+      {
+        path: "/:id",
+        element: <VideoPage />,
       },
     ],
   },
