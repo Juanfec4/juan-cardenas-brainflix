@@ -20,7 +20,7 @@ const VideoPage = () => {
       apiService.getVideo(params.id).then((response) => {
         setVideo(response);
       });
-    } else if (!params?.id && videos.length) {
+    } else if (!params?.id && videos?.length) {
       apiService.getVideo(videos[0].id).then((response) => {
         setVideo(response);
       });

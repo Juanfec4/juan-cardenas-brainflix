@@ -2,7 +2,7 @@ import axios from "axios";
 
 const config = {
   params: {
-    api_key: process.env.REACT_APP_API_URL,
+    api_key: process.env.REACT_APP_API_KEY,
   },
 };
 
