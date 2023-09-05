@@ -1,4 +1,3 @@
-import placeholderImage from "../../assets/images/Upload-video-preview.jpg";
 import uploadIcon from "../../assets/icons/upload.svg";
 import Button from "../ui/Button";
 import InputArea from "../ui/InputArea";
@@ -23,7 +22,10 @@ const UploadForm = ({ handleSubmit }) => {
       <div className="upload-form__content">
         <span className="upload-form__image-container">
           <h3 className="upload-form__label">video thumbnail</h3>
-          <img src={placeholderImage} className="upload-form__image" />
+          <img
+            src={`${process.env.REACT_APP_API_URL}/images/Upload-video-preview.jpg`}
+            className="upload-form__image"
+          />
         </span>
         <span className="upload-form__input-container">
           <InputBox

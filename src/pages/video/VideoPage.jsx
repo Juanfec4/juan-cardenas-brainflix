@@ -4,7 +4,6 @@ import apiService from "../../utils/services/apiService";
 import Description from "../../components/description/Description";
 import CommentSection from "../../components/comments/CommentSection";
 import RecommendedVideos from "../../components/recommended/RecommendedVideos";
-import avatarImg from "../../assets/images/Mohan-muruge.jpg";
 import { useEffect, useState, useMemo, experimental_useOptimistic as useOptimistic } from "react";
 import "./VideoPage.scss";
 
@@ -20,7 +19,7 @@ const VideoPage = () => {
       apiService.getVideo(params.id).then((response) => {
         setVideo(response);
       });
-    } else if (!params?.id && videos?.length) {
+    } else if (!params?.id && videos.length && !video) {
       apiService.getVideo(videos[0].id).then((response) => {
         setVideo(response);
       });
@@ -35,7 +34,7 @@ const VideoPage = () => {
         setVideos(response);
       });
     }
-  }, [videos]);
+  }, []);
 
   const handleNewComment = async (text) => {
     const comment = {
@@ -60,7 +59,7 @@ const VideoPage = () => {
           {optimisticVideo.comments ? (
             <CommentSection
               comments={optimisticVideo.comments}
-              avatarImg={avatarImg}
+              avatarImg={`${process.env.REACT_APP_API_URL}/images/Mohan-muruge.jpg`}
               userName={"User"}
               handleNewComment={handleNewComment}
             />

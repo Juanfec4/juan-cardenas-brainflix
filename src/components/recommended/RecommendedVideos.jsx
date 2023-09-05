@@ -11,13 +11,15 @@ const RecommendedVideos = ({ videos, currentVideo }) => {
   return (
     <section className="recommended">
       <h2 className="recommended__heading">Next Videos</h2>
-      {videos
-        ? videos.map((video) => {
-            if (video.id !== currentVideo.id) {
-              return <VideoCard key={video.id} video={video} handleClick={handleGoToVideoPage} />;
-            }
-          })
-        : null}
+      <ul className="recommended__list">
+        {videos
+          ? videos.map((video) => {
+              if (video.id !== currentVideo.id) {
+                return <VideoCard key={video.id} video={video} handleClick={handleGoToVideoPage} />;
+              }
+            })
+          : null}
+      </ul>
     </section>
   );
 };

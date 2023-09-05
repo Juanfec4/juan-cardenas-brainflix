@@ -4,14 +4,16 @@ import VideoPage from "./pages/video/VideoPage";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import NavBar from "./components/layout/Navbar";
 
-import avatarImg from "./assets/images/Mohan-muruge.jpg";
 import UploadPage from "./pages/upload/UploadPage";
 import Divider from "./components/ui/Divider";
 
 const AppLayout = () => {
   return (
     <>
-      <NavBar avatarImg={avatarImg} userName={"User"} />
+      <NavBar
+        avatarImg={`${process.env.REACT_APP_API_URL}/images/Mohan-muruge.jpg`}
+        userName={"User"}
+      />
       <Divider />
       <Outlet />
     </>
