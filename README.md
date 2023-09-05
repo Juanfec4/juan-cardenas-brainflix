@@ -13,11 +13,12 @@ To run this project, you will need to add the following environment variables to
 
 ## Getting the Project Started
 
-Install dependencies
+#### Install dependencies
 
 ```bash
   npm install
 ```
+#### Run application
 
 ```bash
   npm run start
