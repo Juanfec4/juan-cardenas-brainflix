@@ -40,6 +40,16 @@ const postComment = async (id, comment) => {
   }
 };
 
+const postVideo = async (data) => {
+  try {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/videos/`, data, config);
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return undefined;
+  }
+};
+
 // const getVideosMinified = async () => {
 //   try {
 //     const response = await axios.get("./db/videos.json");
@@ -50,4 +60,4 @@ const postComment = async (id, comment) => {
 //   }
 // };
 
-export default { getVideos, getVideo, postComment };
+export default { getVideos, getVideo, postComment, postVideo };
