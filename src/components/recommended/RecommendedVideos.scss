@@ -8,4 +8,8 @@
     padding-left: $p-between-components-sm;
     color: $clr-silver;
   }
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
 }

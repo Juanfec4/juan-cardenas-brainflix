@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const config = {
-  params: {
-    api_key: process.env.REACT_APP_API_URL,
+  headers: {
+    "x-api-key": process.env.REACT_APP_API_KEY,
   },
 };
 
